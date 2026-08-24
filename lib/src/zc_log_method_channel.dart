@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show MethodChannel;
-import 'package:flutter_plugins/common_utils/zc_log_interface.dart';
+import 'package:flutter_plugins/src/zc_log_interface.dart';
 
 class MethodChannelLogPlugins extends ZcLogInterface {
   /// 与原生平台交互的方法通道

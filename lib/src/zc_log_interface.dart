@@ -1,4 +1,4 @@
-import 'package:flutter_plugins/common_utils/zc_log_method_channel.dart';
+import 'package:flutter_plugins/src/zc_log_method_channel.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 abstract class ZcLogInterface extends PlatformInterface {

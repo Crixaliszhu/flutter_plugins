@@ -1,7 +1,7 @@
 import 'package:flutter_plugins/common_utils/zc_log_plugins.dart';
-import 'package:flutter_plugins/common_utils/zc_log_interface.dart';
 import 'package:flutter_plugins/flutter_plugins_method_channel.dart';
 import 'package:flutter_plugins/flutter_plugins_platform_interface.dart';
+import 'package:flutter_plugins/src/zc_log_interface.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
