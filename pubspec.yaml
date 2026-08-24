@@ -1,11 +1,11 @@
 name: flutter_plugins
 description: "提供给flutter的插件库"
-version: 0.0.5
+version: 0.0.6
 homepage:
 
 environment:
-  sdk: ^3.8.1
-  flutter: '>=3.3.0'
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: '>=3.16.0'
 
 dependencies:
   flutter:
