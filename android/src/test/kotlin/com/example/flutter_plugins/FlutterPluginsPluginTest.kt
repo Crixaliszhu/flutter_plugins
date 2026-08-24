@@ -1,9 +1,7 @@
 package com.example.flutter_plugins
 
-import io.flutter.plugin.common.MethodCall
-import io.flutter.plugin.common.MethodChannel
 import kotlin.test.Test
-import org.mockito.Mockito
+import kotlin.test.assertEquals
 
 /*
  * This demonstrates a simple unit test of the Kotlin portion of this plugin's implementation.
@@ -15,13 +13,9 @@ import org.mockito.Mockito
 
 internal class FlutterPluginsPluginTest {
   @Test
-  fun onMethodCall_report_returnsExpectedValue() {
-    val plugin = FlutterPluginsPlugin()
+  fun report_returnsExpectedValue() {
+    val zcLogApi = ZcLogApiImpl()
 
-    val call = MethodCall("report", mapOf("type" to "crash", "message" to "boom"))
-    val mockResult: MethodChannel.Result = Mockito.mock(MethodChannel.Result::class.java)
-    plugin.onMethodCall(call, mockResult)
-
-    Mockito.verify(mockResult).success("Android - crash report success")
+    assertEquals("Android - crash report success", zcLogApi.report("crash", "boom"))
   }
 }

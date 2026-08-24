@@ -1,8 +1,11 @@
-
-import 'package:flutter_plugins/src/zc_log_interface.dart';
+import 'package:flutter_plugins/src/generated/zc_log_api.g.dart';
 
 class FlutterPluginsPlugin {
-  Future<String?> report(String type, String message) {
-    return ZcLogInterface.instance.report(type, message);
-  }
+  FlutterPluginsPlugin({ZcLogApi? zcLogApi})
+      : _zcLogApi = zcLogApi ?? ZcLogApi();
+
+  final ZcLogApi _zcLogApi;
+
+  Future<String> report(String type, String message) =>
+      _zcLogApi.report(type, message);
 }

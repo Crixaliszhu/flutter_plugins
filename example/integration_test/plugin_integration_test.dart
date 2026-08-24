@@ -16,9 +16,9 @@ void main() {
 
   testWidgets('getPlatformVersion test', (WidgetTester tester) async {
     final FlutterPluginsPlugin plugin = FlutterPluginsPlugin();
-    final String? result = await plugin.report('info', '测试日志输出');
+    final String result = await plugin.report('info', '测试日志输出');
     // The version string depends on the host platform running the test, so
     // just assert that some non-empty string is returned.
-    expect(result?.isNotEmpty, true);
+    expect(result.isNotEmpty, true);
   });
 }
