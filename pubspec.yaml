@@ -1,6 +1,6 @@
 name: flutter_plugins
 description: "提供给flutter的插件库"
-version: 0.0.3
+version: 0.0.4
 homepage:
 
 environment:
