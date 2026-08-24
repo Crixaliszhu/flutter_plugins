@@ -22,7 +22,7 @@ class FlutterPluginsPlugin : FlutterPlugin, MethodCallHandler {
 
     override fun onMethodCall(call: MethodCall, result: Result) {
         when (call.method) {
-            "repost", "report" -> {
+            "report" -> {
                 val type = call.argument<String>("type").orEmpty()
                 val message = call.argument<String>("message").orEmpty()
                 Log.e(TAG, "type: $type, message: $message")

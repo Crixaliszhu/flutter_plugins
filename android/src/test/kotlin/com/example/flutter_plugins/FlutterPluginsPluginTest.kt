@@ -15,10 +15,10 @@ import org.mockito.Mockito
 
 internal class FlutterPluginsPluginTest {
   @Test
-  fun onMethodCall_repost_returnsExpectedValue() {
+  fun onMethodCall_report_returnsExpectedValue() {
     val plugin = FlutterPluginsPlugin()
 
-    val call = MethodCall("repost", mapOf("type" to "crash", "message" to "boom"))
+    val call = MethodCall("report", mapOf("type" to "crash", "message" to "boom"))
     val mockResult: MethodChannel.Result = Mockito.mock(MethodChannel.Result::class.java)
     plugin.onMethodCall(call, mockResult)
 

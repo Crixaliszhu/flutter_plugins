@@ -16,7 +16,7 @@ class MockZcLogInterface
     with MockPlatformInterfaceMixin
     implements ZcLogInterface {
   @override
-  Future<String?> repost(String type, String message) {
+  Future<String?> report(String type, String message) {
     return Future.value('$type:$message');
   }
 }

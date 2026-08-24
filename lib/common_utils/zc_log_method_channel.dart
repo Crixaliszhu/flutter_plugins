@@ -8,8 +8,8 @@ class MethodChannelLogPlugins extends ZcLogInterface {
   final methodChannel = const MethodChannel('zc_log');
 
   @override
-  Future<String?> repost(String type, String message) {
-    return methodChannel.invokeMethod<String>('repost', <String, String>{
+  Future<String?> report(String type, String message) {
+    return methodChannel.invokeMethod<String>('report', <String, String>{
       'type': type,
       'message': message,
     });

@@ -15,7 +15,7 @@ abstract class ZcLogInterface extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<String?> repost(String type, String message) {
-    throw UnimplementedError('ZcLogInterface.repost() 未实现!!!');
+  Future<String?> report(String type, String message) {
+    throw UnimplementedError('ZcLogInterface.report() 未实现!!!');
   }
 }
