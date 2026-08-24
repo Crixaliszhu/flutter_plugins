@@ -1,13 +1,14 @@
 package com.example.flutter_plugins
 
+import android.util.Log
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
 
-/** FlutterPluginsPlugin */
-class ZcLogPlugin : FlutterPlugin, MethodCallHandler {
+/** Main Android entry for the flutter_plugins package. */
+class FlutterPluginsPlugin : FlutterPlugin, MethodCallHandler {
     private companion object {
         const val TAG = "ZcLogPluginReport"
     }
@@ -20,13 +21,14 @@ class ZcLogPlugin : FlutterPlugin, MethodCallHandler {
     }
 
     override fun onMethodCall(call: MethodCall, result: Result) {
-        if (call.method == "report") {
-            val type = call.argument<String>("type").orEmpty()
-            val message = call.agrument<String>("message").orEmpty()
-            Log.e(TAG, "type: ${type}, message: ${message}")
-            result.success("Android -${type} repost success")
-        } else {
-            result.notImplemented()
+        when (call.method) {
+            "repost", "report" -> {
+                val type = call.argument<String>("type").orEmpty()
+                val message = call.argument<String>("message").orEmpty()
+                Log.e(TAG, "type: $type, message: $message")
+                result.success("Android - $type report success")
+            }
+            else -> result.notImplemented()
         }
     }
 

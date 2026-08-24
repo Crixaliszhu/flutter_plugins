@@ -15,13 +15,13 @@ import org.mockito.Mockito
 
 internal class FlutterPluginsPluginTest {
   @Test
-  fun onMethodCall_getPlatformVersion_returnsExpectedValue() {
+  fun onMethodCall_repost_returnsExpectedValue() {
     val plugin = FlutterPluginsPlugin()
 
-    val call = MethodCall("getPlatformVersion", null)
+    val call = MethodCall("repost", mapOf("type" to "crash", "message" to "boom"))
     val mockResult: MethodChannel.Result = Mockito.mock(MethodChannel.Result::class.java)
     plugin.onMethodCall(call, mockResult)
 
-    Mockito.verify(mockResult).success("Android " + android.os.Build.VERSION.RELEASE)
+    Mockito.verify(mockResult).success("Android - crash report success")
   }
 }
