@@ -20,7 +20,7 @@ void main() {
   });
 
   test('getPlatformVersion', () async {
-    ZcLogPlugins flutterPluginsPlugin = ZcLogPlugins();
+    FlutterPluginsPlugin flutterPluginsPlugin = FlutterPluginsPlugin();
     MockFlutterPluginsPlatform fakePlatform = MockFlutterPluginsPlatform();
     FlutterPluginsPlatform.instance = fakePlatform;
 
